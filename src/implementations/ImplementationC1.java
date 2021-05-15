@@ -1,6 +1,5 @@
 package implementations;
-
-import interfaces.InterfaceC;
+import interfaces.*;
 
 public class ImplementationC1 implements InterfaceC {
     private String s;

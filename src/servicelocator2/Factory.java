@@ -1,5 +1,4 @@
 package servicelocator2;
-
 import servicelocator.ServiceLocator;
 
 public interface Factory<T> {

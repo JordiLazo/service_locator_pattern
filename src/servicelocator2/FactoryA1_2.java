@@ -1,11 +1,8 @@
 package servicelocator2;
-
 import implementations.ImplementationA1;
-import interfaces.InterfaceA;
-import interfaces.InterfaceB;
-import interfaces.InterfaceC;
+import interfaces.*;
 
-public class FactoryA1 implements Factory<InterfaceA>{
+public class FactoryA1_2 implements Factory<InterfaceA>{
     public InterfaceA create (ServiceLocator s1) throws LocatorError{
         InterfaceB b = s1.getObject(InterfaceB.class);
         InterfaceC c = s1.getObject(InterfaceC.class);

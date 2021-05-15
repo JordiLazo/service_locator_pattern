@@ -1,7 +1,5 @@
 package implementations;
-
-import interfaces.InterfaceB;
-import interfaces.InterfaceD;
+import interfaces.*;
 
 public class ImplementationB1 implements InterfaceB {
     private InterfaceD d;
