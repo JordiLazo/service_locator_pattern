@@ -8,5 +8,4 @@ public class ImplementationA1 implements InterfaceA {
         this.b = b;
         this.c = c;
     }
-
 }

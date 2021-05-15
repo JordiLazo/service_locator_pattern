@@ -1,5 +1,7 @@
 package servicelocator2;
 
+import interfaces.InterfaceD;
+
 public interface ServiceLocator {
     <T> void setService(Class<T> klass, Factory<T> factory) throws LocatorError;
     <T> void setConstant(Class<T> klass,T value) throws LocatorError;
