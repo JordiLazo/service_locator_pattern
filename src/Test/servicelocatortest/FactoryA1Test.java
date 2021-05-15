@@ -1,5 +1,7 @@
+package servicelocatortest;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class FactoryA1_2Test {
+class FactoryA1Test {
 
 }
