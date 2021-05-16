@@ -11,7 +11,7 @@ public class FactoryB1 implements Factory{
             InterfaceD d = (InterfaceD) s1.getObject("D");
             return new ImplementationB1(d);
         }catch (ClassCastException ex){
-            throw new LocatorError(ex);
+            throw new LocatorError(ex.getMessage());
         }
     }
 }

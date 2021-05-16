@@ -10,7 +10,9 @@ public class FactoryA1 implements Factory{
             InterfaceC c = (InterfaceC) s1.getObject("C");
             return new ImplementationA1(b,c);
         }catch (ClassCastException ex){
-            throw new LocatorError(ex);
+
+            throw new LocatorError(ex.getMessage()); // string?
+
         }
     }
 }

@@ -1,6 +1,9 @@
 package servicelocator;
 
 public class LocatorError extends Exception{
-    public LocatorError(ClassCastException ex) {
+
+    public LocatorError(String message) {
+
+        super(message);
     }
 }
