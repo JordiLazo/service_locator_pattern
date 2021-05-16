@@ -1,0 +1,20 @@
+package servicelocator2;
+
+import interfaces.InterfaceD;
+
+public class CachedServiceLocator implements ServiceLocator{
+    @Override
+    public <T> void setService(Class<T> klass, Factory<T> factory) throws LocatorError {
+
+    }
+
+    @Override
+    public <T> void setConstant(Class<T> klass, T value) throws LocatorError {
+
+    }
+
+    @Override
+    public <T> InterfaceD getObject(Class<T> klass) throws LocatorError {
+        return null;
+    }
+}
