@@ -1,8 +1,5 @@
 package servicelocator;
 
-import interfaces.Factory;
-import interfaces.ServiceLocator;
-
 import java.util.HashMap;
 
 public class CachedServiceLocator implements ServiceLocator {

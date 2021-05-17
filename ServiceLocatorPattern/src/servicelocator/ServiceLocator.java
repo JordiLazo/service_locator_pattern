@@ -1,6 +1,6 @@
-package interfaces;
+package servicelocator;
 
-import interfaces.Factory;
+import servicelocator.Factory;
 import servicelocator.LocatorError;
 
 public interface ServiceLocator {

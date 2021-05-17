@@ -1,11 +1,14 @@
-package servicelocator;
-import implementations.ImplementationA1;
-import interfaces.*;
+package mocks.A;
+import mocks.B.InterfaceB;
+import mocks.C.InterfaceC;
+import servicelocator.Factory;
+import servicelocator.LocatorError;
+import servicelocator.ServiceLocator;
 
-public class FactoryA1 implements Factory{
+public class FactoryA1 implements Factory {
     ImplementationA1 implementationA1;
     @Override
-    public InterfaceA create (ServiceLocator s1) throws LocatorError{
+    public InterfaceA create (ServiceLocator s1) throws LocatorError {
         try{
             InterfaceB b = (InterfaceB) s1.getObject("B");
             InterfaceC c = (InterfaceC) s1.getObject("C");

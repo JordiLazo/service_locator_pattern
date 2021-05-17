@@ -1,9 +1,8 @@
-package servicelocator;
-import implementations.ImplementationC1;
-import implementations.ImplementationD1;
-import interfaces.Factory;
-import interfaces.InterfaceC;
-import interfaces.ServiceLocator;
+package mocks.C;
+
+import servicelocator.Factory;
+import servicelocator.ServiceLocator;
+import servicelocator.LocatorError;
 
 public class FactoryC1 implements Factory {
     ImplementationC1 implementationC1;

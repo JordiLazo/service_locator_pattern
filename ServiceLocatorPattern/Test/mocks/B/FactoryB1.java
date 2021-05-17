@@ -1,10 +1,9 @@
-package servicelocator;
+package mocks.B;
 
-import implementations.ImplementationB1;
-import interfaces.Factory;
-import interfaces.InterfaceB;
-import interfaces.InterfaceD;
-import interfaces.ServiceLocator;
+import mocks.D.InterfaceD;
+import servicelocator.Factory;
+import servicelocator.ServiceLocator;
+import servicelocator.LocatorError;
 
 public class FactoryB1 implements Factory {
     ImplementationB1 implementationB1;
