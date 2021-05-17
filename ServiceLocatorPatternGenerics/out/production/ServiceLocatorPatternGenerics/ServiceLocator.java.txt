@@ -1,6 +1,6 @@
 package servicelocator2;
 
-import interfaces.InterfaceD;
+import moks.D.InterfaceD;
 
 public interface ServiceLocator {
     <T> void setService(Class<T> klass, Factory<T> factory) throws LocatorError;

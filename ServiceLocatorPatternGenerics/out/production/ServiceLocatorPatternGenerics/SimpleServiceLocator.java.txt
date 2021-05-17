@@ -1,6 +1,6 @@
 package servicelocator2;
 
-import interfaces.InterfaceD;
+import moks.D.InterfaceD;
 
 public class SimpleServiceLocator implements ServiceLocator {
 

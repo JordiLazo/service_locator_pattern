@@ -1,5 +1,5 @@
 package servicelocator2;
-import implementations.ImplementationB1;
+import moks.B.ImplementationB1;
 import interfaces.*;
 
 public abstract class FactoryB1 implements Factory<InterfaceB>{

@@ -1,7 +1,7 @@
 package servicelocator2;
 
-import implementations.ImplementationC1;
-import interfaces.InterfaceC;
+import moks.C.ImplementationC1;
+import moks.C.InterfaceC;
 
 public abstract class FactoryC1 implements Factory<InterfaceC> {
     public InterfaceC create(ServiceLocator s1) throws LocatorError {
