@@ -1,7 +1,8 @@
 # Ignore the entire venv folder
 venv/
 .venv/
-# Ignore the entire idea folder
+# Ignore IntelliJ and Pycharm files
+.iml
 .idea
 # Ignore the entire code folder
 .vscode
