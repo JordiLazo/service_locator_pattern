@@ -5,6 +5,7 @@ import common.LocatorError;
 import java.util.HashMap;
 
 public class SimpleServiceLocator implements ServiceLocator{
+
     public static SimpleServiceLocator INSTANCE;
     public final HashMap<String,Object[]> dictionary;
 

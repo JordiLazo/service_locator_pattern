@@ -1,9 +1,10 @@
 package servicelocator2;
 import common.LocatorError;
+
 import java.util.HashMap;
 
-
 public class CachedServiceLocator implements ServiceLocator {
+
     HashMap<Class<?>, Factory<?>> dictionary = new HashMap<>();
     HashMap<Class<?>, Object> dictionary_cnt = new HashMap<>();
 
@@ -32,7 +33,7 @@ public class CachedServiceLocator implements ServiceLocator {
     }
 
     @Override
-    public <T> T getObject(Class<T> klass) throws LocatorError {
+    public <T> Object getObject(Class<T> klass) throws LocatorError {
         return null;
     }
 
