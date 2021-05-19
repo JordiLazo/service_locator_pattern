@@ -1,16 +1,16 @@
 package servicelocator;
 
+
 import common.LocatorError;
 
 import java.util.HashMap;
 
 public class CachedServiceLocator implements ServiceLocator {
-    private static CachedServiceLocator INSTANCE;
-    private final HashMap<String,Object[]> dictionary;
 
+    public static CachedServiceLocator INSTANCE;
+    public final HashMap<String,Object[]> dictionary;
 
-
-    private CachedServiceLocator(){
+    public CachedServiceLocator(){
         this.dictionary = new HashMap<>();
     }
 
@@ -25,7 +25,7 @@ public class CachedServiceLocator implements ServiceLocator {
     public void setService(String name, Factory factory) throws LocatorError {
         if (!dictionary.containsKey(name)){
             dictionary.put(name,new Object[]{factory,null});
-            System.err.println("Added Service with name="+name);
+            //System.err.println("Added Service with name="+name);
         }else {
             throw new LocatorError("A constant is registered to '"+name+"'");
         }
@@ -35,7 +35,7 @@ public class CachedServiceLocator implements ServiceLocator {
     public void setConstant(String name, Object value) throws LocatorError {
         if (!dictionary.containsKey(name)) {
             dictionary.put(name,new Object[]{null,value});
-            System.err.println("Added implemntatiom with name="+name);
+            //System.err.println("Added implemntatiom with name="+name);
         }else{
             throw new LocatorError("ALready Factory registered to '"+name+"'");
         }
@@ -51,10 +51,10 @@ public class CachedServiceLocator implements ServiceLocator {
             //0 -> factory
             //1-> Implemntation
             if (elements[1] != null) {
-                System.err.println("Returning cached implementation named: "+name);
+                //System.err.println("Returning cached implementation named: "+name);
                 return elements[1];
             }else{
-                System.err.println("Not found an implementation named: "+name+" creating it");
+                //System.err.println("Not found an implementation named: "+name+" creating it");
                 Factory factory = (Factory) elements[0];
                 elements[1] =factory.create(this);
 
@@ -64,5 +64,4 @@ public class CachedServiceLocator implements ServiceLocator {
             throw new LocatorError("Cant get");
         }
     }
-
 }

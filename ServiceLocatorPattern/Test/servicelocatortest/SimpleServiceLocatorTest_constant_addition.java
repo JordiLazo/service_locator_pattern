@@ -4,9 +4,9 @@ import common.LocatorError;
 import mocks.C.ImplementationC1;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import servicelocator2.ServiceLocator;
-import servicelocator2.Factory;
-import servicelocator2.SimpleServiceLocator;
+import servicelocator.ServiceLocator;
+import servicelocator.Factory;
+import servicelocator.SimpleServiceLocator;
 
 import java.util.Objects;
 
