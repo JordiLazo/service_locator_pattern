@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class CachedServiceLocator implements ServiceLocator {
     HashMap<Class<?>, Factory<?>> dictionary = new HashMap<>();
-    HashMap<Class<?>, ?> dictionary_cnt = new HashMap<>();
+    HashMap<Class<?>, Object> dictionary_cnt = new HashMap<>();
 
     @Override
     public <T> void setService(Class<T> klass, Factory<T> factory) throws LocatorError {

@@ -12,8 +12,6 @@ import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-
 class SimpleServiceLocatorTest_constant_addition {
     SimpleServiceLocator sl;
     @BeforeEach
