@@ -9,24 +9,24 @@ public class CachedServiceLocator implements ServiceLocator {
 
     @Override
     public <T> void setService(Class<T> klass, Factory<T> factory) throws LocatorError {
-        if (!dictionary.containsKey(klass) && !dictionary_cnt.containsKey(klass) ){
+        if (!dictionary.containsKey(klass) && !dictionary_cnt.containsKey(klass)) {
             dictionary.put(klass, factory);
-            dictionary_cnt.put(klass,null);
+            dictionary_cnt.put(klass, null);
 
-        }else {
-            throw new LocatorError("A constant is registered to '"+klass.getName()+"'");
+        } else {
+            throw new LocatorError("A constant is registered to '" + klass.getName() + "'");
         }
 
     }
 
     @Override
     public <T> void setConstant(Class<T> klass, T value) throws LocatorError {
-        if (!dictionary.containsKey(klass) && !dictionary_cnt.containsKey(klass) ) {
+        if (!dictionary.containsKey(klass) && !dictionary_cnt.containsKey(klass)) {
             dictionary.put(klass, null);
             dictionary_cnt.put(klass, value);
             //System.err.println("Added implemntatiom with name="+name);
-        }else{
-            throw new LocatorError("ALready Factory registered to '"+klass.getName()+"'");
+        } else {
+            throw new LocatorError("ALready Factory registered to '" + klass.getName() + "'");
         }
 
     }
@@ -35,3 +35,5 @@ public class CachedServiceLocator implements ServiceLocator {
     public <T> T getObject(Class<T> klass) throws LocatorError {
         return null;
     }
+
+}

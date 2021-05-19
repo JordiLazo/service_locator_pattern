@@ -15,7 +15,7 @@ public class SimpleServiceLocator implements ServiceLocator {
     }
 
     @Override
-    public <T> InterfaceD getObject(Class<T> klass) throws LocatorError {
+    public <T> T getObject(Class<T> klass) throws LocatorError {
         return null;
     }
 }

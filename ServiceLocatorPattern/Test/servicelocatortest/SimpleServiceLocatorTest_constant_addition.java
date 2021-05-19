@@ -1,9 +1,12 @@
 package servicelocatortest;
 
-import errors.LocatorError;
+import common.LocatorError;
+import mocks.C.ImplementationC1;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sample.implementations.ImplementationC1;
+import servicelocator2.ServiceLocator;
+import servicelocator2.Factory;
+import servicelocator2.SimpleServiceLocator;
 
 import java.util.Objects;
 
@@ -34,8 +37,6 @@ class SimpleServiceLocatorTest_constant_addition {
         assertNotSame(a,b);
         assertEquals(a, sl.getObject("C"));
     }
-
-
 
 
     private static class Factory2 implements Factory {
