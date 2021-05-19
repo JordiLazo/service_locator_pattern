@@ -1,15 +1,17 @@
 package servicelocator2;
 
+import common.LocatorError;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import servicelocator.SimpleServiceLocator;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SimpleServiceLocatortest {
 
-    servicelocator.SimpleServiceLocator sl;
+    SimpleServiceLocator sl;
     @BeforeEach
     void setUp() {
-        sl= new SimpleServiceLocator();
+        sl = new SimpleServiceLocator();
     }
 
     @Test
@@ -17,10 +19,8 @@ class SimpleServiceLocatortest {
     }
 
     @Test
-    void setConstant() {
+    void setConstant() throws LocatorError {
+
     }
 
-    @Test
-    void getObject() {
-    }
 }
