@@ -1,6 +1,6 @@
 package servicelocator2;
 
-import interfaces.InterfaceD;
+import common.LocatorError;
 
 public class SimpleServiceLocator implements ServiceLocator {
 

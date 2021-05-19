@@ -2,7 +2,7 @@ package mocks.D;
 
 import servicelocator.Factory;
 import servicelocator.ServiceLocator;
-import servicelocator.LocatorError;
+import common.LocatorError;
 
 public class FactoryD1 implements Factory {
     ImplementationD1 implementationD1;

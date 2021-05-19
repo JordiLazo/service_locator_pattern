@@ -2,7 +2,7 @@ package mocks.C;
 
 import servicelocator.Factory;
 import servicelocator.ServiceLocator;
-import servicelocator.LocatorError;
+import common.LocatorError;
 
 public class FactoryC1 implements Factory {
     ImplementationC1 implementationC1;

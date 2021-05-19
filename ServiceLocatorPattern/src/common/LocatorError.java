@@ -1,4 +1,4 @@
-package servicelocator;
+package common;
 
 public class LocatorError extends Exception{
 

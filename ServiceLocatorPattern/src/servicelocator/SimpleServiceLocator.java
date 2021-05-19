@@ -1,5 +1,7 @@
 package servicelocator;
 
+import common.LocatorError;
+
 public class SimpleServiceLocator implements ServiceLocator {
     @Override
     public void setService(String name, Factory factory) throws LocatorError {

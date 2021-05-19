@@ -1,5 +1,7 @@
 package servicelocator;
 
+import common.LocatorError;
+
 import java.util.HashMap;
 
 public class CachedServiceLocator implements ServiceLocator {

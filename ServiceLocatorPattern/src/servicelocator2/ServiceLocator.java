@@ -1,6 +1,6 @@
 package servicelocator2;
 
-import interfaces.InterfaceD;
+import common.LocatorError;
 
 public interface ServiceLocator {
     <T> void setService(Class<T> klass, Factory<T> factory) throws LocatorError;

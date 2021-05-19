@@ -1,5 +1,7 @@
 package servicelocator;
 
+import common.LocatorError;
+
 public class Main {
     public static void main(String[] args) throws LocatorError {
 
