@@ -49,13 +49,14 @@ public class SimpleServiceLocator implements ServiceLocator{
             if (elements[1] != null) {
                 //System.err.println("Returning cached implementation named: "+name);
                 return elements[1];
-            } else {
+            }else{
                 //System.err.println("Not found an implementation named: "+name+" creating it");
                 Factory factory = (Factory) elements[0];
                 return factory.create(this);
             }
-        } else {
+        }else{
             throw new LocatorError("Cant get");
         }
     }
+
 }
