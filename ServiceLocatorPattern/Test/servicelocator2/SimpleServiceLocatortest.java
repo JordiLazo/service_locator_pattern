@@ -28,4 +28,16 @@ class SimpleServiceLocatortest {
         });
     }
 
+    //Check throws LocatorError when we use setConstant()
+    @Test
+    <T> void  setConstantLocatorError() {
+        T o= (T) "Obj";
+        T o1 = (T) "Obj1";
+
+        assertThrows(LocatorError.class, ()-> {
+            ssl.setConstant(Object.class, o);
+            ssl.setConstant(Object.class, o1);
+        });
+    }
+
 }
