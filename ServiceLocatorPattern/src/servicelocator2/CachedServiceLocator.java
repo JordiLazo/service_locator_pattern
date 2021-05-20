@@ -10,31 +10,29 @@ public class CachedServiceLocator implements ServiceLocator {
 
     @Override
     public <T> void setService(Class<T> klass, Factory<T> factory) throws LocatorError {
-        if (!dictionary.containsKey(klass) && !dictionary_cnt.containsKey(klass)) {
+        if (!dictionary.containsKey(klass))
             dictionary.put(klass, factory);
-            dictionary_cnt.put(klass, null);
-
-        } else {
-            throw new LocatorError("A constant is registered to '" + klass.getName() + "'");
-        }
-
+        else
+            throw new LocatorError("Factory is already registered");
     }
 
     @Override
     public <T> void setConstant(Class<T> klass, T value) throws LocatorError {
-        if (!dictionary.containsKey(klass) && !dictionary_cnt.containsKey(klass)) {
-            dictionary.put(klass, null);
+        if (!dictionary_cnt.containsKey(klass))
             dictionary_cnt.put(klass, value);
-            //System.err.println("Added implemntatiom with name="+name);
-        } else {
-            throw new LocatorError("ALready Factory registered to '" + klass.getName() + "'");
-        }
-
+        else
+            throw new LocatorError("Constant is already registered");
     }
 
-    @Override
-    public <T> Object getObject(Class<T> klass) throws LocatorError {
-        return null;
+    @SuppressWarnings("unchecked")
+    public <T> T getObject(Class<T> klass) throws LocatorError {
+        if (dictionary_cnt.containsKey(klass))
+            return (T) dictionary_cnt.get(klass);
+        else if(dictionary.containsKey(klass)) {
+            dictionary_cnt.put(klass, dictionary.get(klass).create(this));
+            return (T) dictionary_cnt.get(klass);
+        }else
+            throw new LocatorError("Cant get");
     }
 
 }
