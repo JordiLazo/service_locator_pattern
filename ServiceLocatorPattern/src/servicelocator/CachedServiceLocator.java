@@ -27,7 +27,7 @@ public class CachedServiceLocator implements ServiceLocator {
             dictionary.put(name,new Object[]{factory,null});
             //System.err.println("Added Service with name="+name);
         }else {
-            throw new LocatorError("A constant is registered to '"+name+"'");
+            throw new LocatorError("ALready Factory registered to '"+name+"'");
         }
     }
 
@@ -37,7 +37,7 @@ public class CachedServiceLocator implements ServiceLocator {
             dictionary.put(name,new Object[]{null,value});
             //System.err.println("Added implemntatiom with name="+name);
         }else{
-            throw new LocatorError("ALready Factory registered to '"+name+"'");
+            throw new LocatorError("A constant is registered to '"+name+"'");
         }
     }
 

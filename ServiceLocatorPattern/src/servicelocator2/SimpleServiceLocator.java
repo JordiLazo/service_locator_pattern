@@ -1,16 +1,12 @@
 package servicelocator2;
 
 import common.LocatorError;
-
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 
 public class SimpleServiceLocator implements ServiceLocator {
 
-    private Map<Class<?>, Factory<?>> factories;
-    private Map<Class<?>, Object> constants;
+    private HashMap<Class<?>, Factory<?>> factories;
+    private HashMap<Class<?>, Object> constants;
 
     public SimpleServiceLocator(){
         factories = new HashMap<>();
