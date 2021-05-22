@@ -36,7 +36,7 @@ public class SimpleServiceLocator implements ServiceLocator {
         else if (factories.containsKey(klass))
             return (T) factories.get(klass).create(this);
         else
-            throw new LocatorError("Cant get");
+            throw new LocatorError("Can't get");
     }
 
 }

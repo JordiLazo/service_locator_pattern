@@ -32,7 +32,7 @@ public class CachedServiceLocator implements ServiceLocator {
             dictionary_cnt.put(klass, dictionary.get(klass).create(this));
             return (T) dictionary_cnt.get(klass);
         }else
-            throw new LocatorError("Cant get");
+            throw new LocatorError("Can't get");
     }
 
 }

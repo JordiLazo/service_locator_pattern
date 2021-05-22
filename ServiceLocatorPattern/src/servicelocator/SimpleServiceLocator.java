@@ -25,7 +25,7 @@ public class SimpleServiceLocator implements ServiceLocator{
         if (!dictionary.containsKey(name)){
             dictionary.put(name,new Object[]{factory,null});
         }else {
-            throw new LocatorError("ALready Factory registered to '"+name+"'");
+            throw new LocatorError("Already Factory registered to '"+name+"'");
         }
     }
 
@@ -49,7 +49,7 @@ public class SimpleServiceLocator implements ServiceLocator{
                 return factory.create(this);
             }
         }else{
-            throw new LocatorError("Cant get");
+            throw new LocatorError("Can't get");
         }
     }
 
